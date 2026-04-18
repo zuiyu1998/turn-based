@@ -13,3 +13,15 @@ config_version=5
 config/name="turn_based"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameplayAbilitySystem="*res://addons/godot_ability_system/scripts/singletons/gameplay_ability_system.gd"
+DamageCalculator="*res://addons/godot_ability_system/scripts/singletons/damage_calculator.gd"
+TagManager="*res://addons/godot_ability_system/scripts/singletons/gameplay_tag_manager.gd"
+AbilityEventBus="*res://addons/godot_ability_system/scripts/singletons/ability_event_bus.gd"
+GameplayCueManager="*res://addons/godot_ability_system/scripts/singletons/gameplay_cue_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_ability_system/plugin.cfg")
