@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="turn_based"
+run/main_scene="uid://b1ldxytduffv4"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,6 +22,14 @@ DamageCalculator="*res://addons/godot_ability_system/scripts/singletons/damage_c
 TagManager="*res://addons/godot_ability_system/scripts/singletons/gameplay_tag_manager.gd"
 AbilityEventBus="*res://addons/godot_ability_system/scripts/singletons/ability_event_bus.gd"
 GameplayCueManager="*res://addons/godot_ability_system/scripts/singletons/gameplay_cue_manager.gd"
+
+[display]
+
+window/size/viewport_width=384
+window/size/viewport_height=216
+window/size/window_width_override=1152
+window/size/window_height_override=648
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

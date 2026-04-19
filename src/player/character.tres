@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="GameplayAttributeSet" load_steps=10 format=3 uid="uid://dwsr2uins8nnt"]
+
+[ext_resource type="Script" uid="uid://dj0iwc88r8noi" path="res://addons/godot_ability_system/scripts/attributes/gameplay_attribute.gd" id="1_2brt5"]
+[ext_resource type="Script" uid="uid://dd5tuhga1jg51" path="res://addons/godot_ability_system/scripts/utilties/scalable_value.gd" id="2_dqhof"]
+[ext_resource type="Script" uid="uid://bkkqftstlq2s6" path="res://addons/godot_ability_system/scripts/attributes/gameplay_attribute_set.gd" id="3_wkn0m"]
+
+[sub_resource type="Resource" id="Resource_2brt5"]
+script = ExtResource("1_2brt5")
+attribute_id = &"Strength"
+attribute_display_name = "Strength"
+attribute_description = "Strength"
+metadata/_custom_type_script = "uid://dj0iwc88r8noi"
+
+[sub_resource type="Resource" id="Resource_dqhof"]
+script = ExtResource("1_2brt5")
+attribute_id = &"Dexterity"
+attribute_display_name = "Dexterity"
+attribute_description = "Dexterity"
+metadata/_custom_type_script = "uid://dj0iwc88r8noi"
+
+[sub_resource type="Resource" id="Resource_wkn0m"]
+script = ExtResource("1_2brt5")
+attribute_id = &"Constitution"
+attribute_display_name = "Constitution"
+attribute_description = "Constitution"
+metadata/_custom_type_script = "uid://dj0iwc88r8noi"
+
+[sub_resource type="Resource" id="Resource_8qanr"]
+script = ExtResource("1_2brt5")
+attribute_id = &"Intelligence"
+attribute_display_name = "Intelligence"
+attribute_description = "Intelligence"
+metadata/_custom_type_script = "uid://dj0iwc88r8noi"
+
+[sub_resource type="Resource" id="Resource_tafdi"]
+script = ExtResource("1_2brt5")
+attribute_id = &"Wisdom"
+attribute_display_name = "Wisdom"
+attribute_description = "Wisdom"
+metadata/_custom_type_script = "uid://dj0iwc88r8noi"
+
+[sub_resource type="Resource" id="Resource_l8lrw"]
+script = ExtResource("1_2brt5")
+attribute_id = &"Charisma"
+attribute_display_name = "Charisma"
+attribute_description = "Charisma"
+metadata/_custom_type_script = "uid://dj0iwc88r8noi"
+
+[resource]
+script = ExtResource("3_wkn0m")
+attributes = Dictionary[ExtResource("1_2brt5"), float]({
+SubResource("Resource_2brt5"): 0.0,
+SubResource("Resource_dqhof"): 0.0,
+SubResource("Resource_wkn0m"): 0.0,
+SubResource("Resource_8qanr"): 0.0,
+SubResource("Resource_tafdi"): 0.0,
+SubResource("Resource_l8lrw"): 0.0
+})
+metadata/_custom_type_script = "uid://bkkqftstlq2s6"

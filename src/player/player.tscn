@@ -1,14 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt8sqbicaba1m"]
+[gd_scene load_steps=5 format=3 uid="uid://dt8sqbicaba1m"]
 
 [ext_resource type="Texture2D" uid="uid://bgxx2wf0bvtc6" path="res://assets/tiles/tile_0085.png" id="1_4anbu"]
+[ext_resource type="Script" uid="uid://2wkbn5umledn" path="res://src/player/player.gd" id="1_mf2ua"]
 [ext_resource type="Script" uid="uid://cyyqof6fbsfyc" path="res://addons/godot_ability_system/scripts/components/gameplay_attribute_component.gd" id="2_rxibo"]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf2ua"]
+size = Vector2(11, 13.5)
 
-[node name="Tile0085" type="Sprite2D" parent="."]
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_mf2ua")
+
+[node name="Body" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
 texture = ExtResource("1_4anbu")
 
 [node name="GameplayAttributeComponent" type="Node" parent="."]
 script = ExtResource("2_rxibo")
 metadata/_custom_type_script = "uid://cyyqof6fbsfyc"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6.75)
+shape = SubResource("RectangleShape2D_mf2ua")
+disabled = true
