@@ -25,3 +25,7 @@ GameplayCueManager="*res://addons/godot_ability_system/scripts/singletons/gamepl
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_ability_system/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

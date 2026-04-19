@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt8sqbicaba1m"]
+
+[ext_resource type="Texture2D" uid="uid://bgxx2wf0bvtc6" path="res://assets/tiles/tile_0085.png" id="1_4anbu"]
+[ext_resource type="Script" uid="uid://cyyqof6fbsfyc" path="res://addons/godot_ability_system/scripts/components/gameplay_attribute_component.gd" id="2_rxibo"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Tile0085" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_4anbu")
+
+[node name="GameplayAttributeComponent" type="Node" parent="."]
+script = ExtResource("2_rxibo")
+metadata/_custom_type_script = "uid://cyyqof6fbsfyc"
