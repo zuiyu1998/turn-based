@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcmid3v3281yx"]
+
+[ext_resource type="Script" uid="uid://jf5lqkpviym1" path="res://src/components/highlighted_area.gd" id="1_n32fx"]
+
+[node name="HighlightedArea" type="Polygon2D"]
+color = Color(1, 1, 1, 0.5019608)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+script = ExtResource("1_n32fx")
