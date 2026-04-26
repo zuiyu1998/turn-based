@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://hjabg65ah1s0"]
+
+[ext_resource type="Script" uid="uid://c60fvp40p77we" path="res://src/components/highlighted_line.gd" id="1_5uxkm"]
+
+[node name="HighlightedLine" type="Line2D"]
+points = PackedVector2Array(0, -8, 8, -8, 8, 8, 0, 8, -8, 8, -8, -8, 0, -8)
+width = 1.0
+script = ExtResource("1_5uxkm")

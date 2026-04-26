@@ -5,13 +5,13 @@
 [ext_resource type="Script" uid="uid://cyyqof6fbsfyc" path="res://addons/godot_ability_system/scripts/components/gameplay_attribute_component.gd" id="2_rxibo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mf2ua"]
-size = Vector2(11, 13.5)
+size = Vector2(11, 13.75)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_mf2ua")
 
 [node name="Body" type="Sprite2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -1)
 texture = ExtResource("1_4anbu")
 
 [node name="GameplayAttributeComponent" type="Node" parent="."]
@@ -19,6 +19,6 @@ script = ExtResource("2_rxibo")
 metadata/_custom_type_script = "uid://cyyqof6fbsfyc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6.75)
+position = Vector2(0, 0.125)
 shape = SubResource("RectangleShape2D_mf2ua")
 disabled = true
