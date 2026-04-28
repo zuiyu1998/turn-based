@@ -4,7 +4,7 @@ class_name MobileRangeLayer
 const HIGHLIGHTED_AREA = preload("res://src/components/highlighted_area.tscn")
 
 @export
-var game_area: GameArea
+var game_map: GameMap
 
 # 对象池
 var _pool: Array[Node2D] = []
@@ -12,14 +12,14 @@ var _pool: Array[Node2D] = []
 var _highlighted_areas: Dictionary = {}
 
 func show_cell(cells: Array[Vector2i], group_name: String = "default"):
-	if !game_area:
+	if !game_map:
 		push_error("Game area not found.")
 		return
 	
 	var group = []
 	for cell in cells:
 		var area = _get_from_pool()
-		area.position = game_area.get_local_position(cell)
+		area.position = game_map.get_local_position(cell)
 		group.push_back(area)
 		
 	_highlighted_areas[group_name] = group
