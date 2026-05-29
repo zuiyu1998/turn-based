@@ -11,7 +11,6 @@ func _ready() -> void:
 	context.server = MapMobileRangeLayerServer.new_server(game_area)
 	player.do_initialize(context)
 	
-	player.show_movable_areas()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
