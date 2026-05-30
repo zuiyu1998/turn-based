@@ -15,7 +15,7 @@ func _ready() -> void:
 	## 初始化组件
 	gameplay_attribute_component.initialize([data.attribute_set])
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	show_movable_areas()
 	
 	var target = mobile_range_layer_client.get_map_coordinate(get_global_mouse_position())

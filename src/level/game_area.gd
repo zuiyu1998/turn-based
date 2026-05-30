@@ -23,9 +23,9 @@ func show_move_path(unit: Unit, target: Vector2i):
 
 
 func _initialize_map_grid():
-	for position in grass.get_used_cells():
+	for cell_position in grass.get_used_cells():
 		var item = MapGrid.MapGridItem.new()
-		var tile_data = grass.get_cell_tile_data(position)
+		var tile_data = grass.get_cell_tile_data(cell_position)
 		var terrain_class = MapEnums.TerrainClass.Grass
 		var move_cost = 1
 		
@@ -37,7 +37,7 @@ func _initialize_map_grid():
 		
 		item.terrain_class = terrain_class
 		item.move_cost = move_cost
-		_map_grid.set_item(position, item)
+		_map_grid.set_item(cell_position, item)
 
 func _ready() -> void:
 	_initialize_map_grid()
@@ -92,7 +92,7 @@ func get_movable_cells(start_position: Vector2i, max_action: int) -> Array[Vecto
 	return reachable
 
 # 辅助函数：获取指定格子的地形移动消耗
-func _get_movement_cost(cell: Vector2i) -> int:
+func _get_movement_cost(_cell: Vector2i) -> int:
 	return 1  # 默认返回基础消耗1
 
 # 辅助函数：检查坐标是否在地图范围内
@@ -113,15 +113,15 @@ func _push_to_queue(queue: Array, cell: Vector2i, cost: int):
 
 func compute_highlighted():
 	var mouse = get_local_mouse_position()
-	var position = grass.local_to_map(mouse)
-	set_highlighted(position)
+	var map_position = grass.local_to_map(mouse)
+	set_highlighted(map_position)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	compute_highlighted()
 
 # 设置高亮
-func set_highlighted(position: Vector2i):
-	var local = grass.map_to_local(position)
+func set_highlighted(p_position: Vector2i):
+	var local = grass.map_to_local(p_position)
 	highlighted_line.position = local
 
 
@@ -130,6 +130,6 @@ func get_map_coordinate(p_global_position: Vector2) -> Vector2i:
 	return grass.local_to_map(local)
 
 
-func get_local_position(position: Vector2i) -> Vector2:
-	var local = grass.map_to_local(position)
+func get_local_position(p_position: Vector2i) -> Vector2:
+	var local = grass.map_to_local(p_position)
 	return local
